@@ -22,4 +22,7 @@ describe('HashTable', () => {
       hashTable.set("Jane", "Fan of The Beatles");
       expect(hashTable.get("John")).toEqual("Lead Singer");
     });
+    test('should return null if the bucket has no values', () => {
+      expect(hashTable.get("John")).toEqual(null);
+    });
 });
