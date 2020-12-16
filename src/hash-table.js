@@ -16,10 +16,13 @@ export default class HashTable {
   get(key) {
     const index = this.hash(key);
     const bucket = this.array[index];
+    if  (bucket != undefined) {
     for (let i = 0; i < bucket.length; i++) {
       if (bucket[i][0] === key) {
         return bucket[i][1];
       }
     }
   }
+  return null;
+}
 }
