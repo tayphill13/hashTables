@@ -1,3 +1,6 @@
+// A good hash table needs to have enough buckets, but not too many.  A hash table should be about 80% full
+//A good hashing algorithm needs to evenly distribute key-value pairs into buckets, resulting in as few collisions as possible.
+
 export default class HashTable {
   constructor() {
     this.array = [];
