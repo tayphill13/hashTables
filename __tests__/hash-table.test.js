@@ -17,4 +17,9 @@ describe('HashTable', () => {
       hashTable.set("John", "Lead Singer");
       expect(hashTable.array[9]).toEqual([["John", "Lead Singer"]]);
     });
+    test('should correctly get a key-value pair from a hash table', () => {
+      hashTable.set("John", "Lead Singer");
+      hashTable.set("Jane", "Fan of The Beatles");
+      expect(hashTable.get("John")).toEqual("Lead Singer");
+    });
 });
