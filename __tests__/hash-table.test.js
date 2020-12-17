@@ -38,6 +38,7 @@ describe('HashTable', () => {
     //Thurs Practice
     test('should properly remove a key-value pair from the hashTable', () => {
       hashTable.set("Billy Shears", "fake Paul");
+      hashTable.set("Barbra", "song subject");
       hashTable.remove("Billy Shears");
       expect(hashTable.get("Billy Shears")).toEqual(null);
     });
