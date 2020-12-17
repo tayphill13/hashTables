@@ -23,8 +23,8 @@ export default class HashTable {
     for (let i = 0; i < bucket.length; i++) {
       if (bucket[i][0] === key) {
         if (remove) {
-          bucket.splice(i, 1);
-          return true;
+          let v = bucket.splice(i, 1);
+          return ("We removed " + v);
         }
         return bucket[i][1];
       }
