@@ -37,3 +37,15 @@ export default class HashTable {
     this.get(key, true);
   }
 }
+
+// Possible UPgraded hash function //
+
+// function hash(key) {
+//   let hash = 5381;
+//   let totalLetters = key.length;
+
+//   while(totalLetters) {
+//     hash = (hash * 33) ^ key.charCodeAt(--totalLetters);
+//   }
+//   return hash >>> 0;
+// }
