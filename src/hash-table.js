@@ -16,16 +16,24 @@ export default class HashTable {
     }
     this.array[index].push([key, value]);
   };
-  get(key) {
+  get(key, remove = false) {
     const index = this.hash(key);
     const bucket = this.array[index];
     if  (bucket != undefined) {
     for (let i = 0; i < bucket.length; i++) {
       if (bucket[i][0] === key) {
+        if (remove) {
+          bucket.splice(i, 1);
+          return true;
+        }
         return bucket[i][1];
       }
     }
   }
   return null;
 }
+
+  remove(key) {
+    this.get(key, true);
+  }
 }
