@@ -35,4 +35,10 @@ describe('HashTable', () => {
       hashTable.set("Jane", "Fan of The Beatles");
       expect(hashTable.get("Jim")).toEqual(null);
     });
+    //Thurs Practice
+  est('should properly remove a key-value pair from the hashTable', () => {
+    hashTable.set("Billy Shears", "fake Paul");
+    hashTable.remove("Billy Shears");
+    expect(hashTable.get("Billy Shears")).toEqual(null);
+  });
 });
